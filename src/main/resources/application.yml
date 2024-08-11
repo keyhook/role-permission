@@ -1,0 +1,35 @@
+spring:
+  main:
+    banner-mode: off
+  messages:
+    use-code-as-default-message: true
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/role_permission
+    username: role_permission
+    password: 123456789
+    hikari:
+      auto-commit: false
+      connectionTimeout: 30000
+      maxLifetime: 240000
+      maximumPoolSize: 20
+      minimumIdle: 5
+      idleTimeout: 230000
+      data-source-properties:
+        loginTimeout: 5
+        connectTimeout: 5
+        socketTimeout: 30
+        cancelSignalTimeout: 10
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 25
+          batch_versioned_data: true
+          time_zone: UTC
+        order_inserts: true
+        order_updates: true
+        show_sql: false
+        cache:
+          use_second_level_cache: false

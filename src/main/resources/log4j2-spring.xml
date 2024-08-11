@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+  <Properties>
+    <Property name="SERVICE_NAME">role-permission</Property>
+    <Property name="CONSOLE_LAYOUT_PATTERN">%blue{%d{yyyy-MM-dd'T'HH:mm:ss.SSS'Z'}} %highlight{%-5level} %magenta{[ ${SERVICE_NAME} - %t ]} %C{1.}(%L): - %msg%n</Property>
+  </Properties>
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="${CONSOLE_LAYOUT_PATTERN}"/>
+    </Console>
+  </Appenders>
+  <Loggers>
+    <Root level="info" includeLocation="true">
+      <AppenderRef ref="Console"/>
+    </Root>
+  </Loggers>
+</Configuration>

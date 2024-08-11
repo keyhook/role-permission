@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+  postgresql:
+    image: postgres:15.3
+    command: [ "postgres", "-c", "log_statement=all", "-c", "log_destination=stderr" ]
+    container_name: postgres_role_permission
+    ports:
+      - "5432:5432"
+    environment:
+      - "POSTGRES_USER=role_permission"
+      - "POSTGRES_PASSWORD=123456789"
+      - "POSTGRES_DB=role_permission"

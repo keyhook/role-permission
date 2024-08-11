@@ -1,0 +1,888 @@
+{
+	"info": {
+		"_postman_id": "c9215168-a5dd-464b-bcdb-223737bf57b5",
+		"name": "Ovida",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1399095"
+	},
+	"item": [
+		{
+			"name": "Create Token (Login)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"member@member.com\",\n    \"password\": \"123456789\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/v1/tokens",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"v1",
+						"tokens"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Token (Admin)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"admin@admin.com\",\n    \"password\": \"123456789\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/v1/tokens",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"tokens"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 11 Aug 2024 06:29:26 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": \"OVI0000\",\n    \"msg\": \"OK\",\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI0NTA5MzVlNi0zOTY3LTRmNzQtOTUyNi1jYzAxZTYyODk3NDUiLCJzdWIiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDAiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInJvbCI6IkFkbWluIiwicHJpIjpbIldSSVRFX1JPTEUiLCJSRUFEX0FDQ09VTlQiXSwiZXhwIjoxNzIzMzY0OTY2fQ.11YfSAuyO4t3VcRd1EQ5g3JdoObyzZ4rs_yRyNG2HxS6G4TBHLQup9rRzMZvjXSYQlVsx5-X_kfuXqXTAeA6Yg\"\n    }\n}"
+				},
+				{
+					"name": "Create Token (Member)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"member@member.com\",\n    \"password\": \"123456789\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/v1/tokens",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"tokens"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 11 Aug 2024 06:55:47 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": \"OVI0000\",\n    \"msg\": \"OK\",\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIyMmVmMGQ0NS1kODYxLTQzNWMtOTYwNC0wZDY4ZTJiZTNmMjIiLCJzdWIiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDIiLCJlbWFpbCI6Im1lbWJlckBtZW1iZXIuY29tIiwicm9sIjoiTWVtYmVyIiwicHJpIjpbXSwiZXhwIjoxNzIzMzY2NTQ3fQ.y8Fun-2CwXmAzmgrONyoeVaer3AoEVoE6-m1UBHiW0lHNhnzH2UKqD54APL_-b35GlgpJM_E6EshAWkgeO0CMw\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Search Accounts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIyMmVmMGQ0NS1kODYxLTQzNWMtOTYwNC0wZDY4ZTJiZTNmMjIiLCJzdWIiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDIiLCJlbWFpbCI6Im1lbWJlckBtZW1iZXIuY29tIiwicm9sIjoiTWVtYmVyIiwicHJpIjpbXSwiZXhwIjoxNzIzMzY2NTQ3fQ.y8Fun-2CwXmAzmgrONyoeVaer3AoEVoE6-m1UBHiW0lHNhnzH2UKqD54APL_-b35GlgpJM_E6EshAWkgeO0CMw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/v1/accounts?page=0&pageSize=10",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"v1",
+						"accounts"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Admin Search Accounts",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/v1/accounts?page=0&pageSize=10",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"accounts"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 11 Aug 2024 06:43:40 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": \"OVI0000\",\n    \"msg\": \"OK\",\n    \"data\": {\n        \"records\": [\n            {\n                \"id\": \"00000000-0000-0000-0000-000000000001\",\n                \"email\": \"admin@admin.com\",\n                \"status\": \"ACTIVE\",\n                \"roleName\": \"Admin\",\n                \"createdAt\": \"2024-08-11T06:43:20.524743Z\",\n                \"updatedAt\": \"2024-08-11T06:43:20.524743Z\"\n            },\n            {\n                \"id\": \"00000000-0000-0000-0000-000000000002\",\n                \"email\": \"member@member.com\",\n                \"status\": \"ACTIVE\",\n                \"roleName\": \"Member\",\n                \"createdAt\": \"2024-08-11T06:43:20.524743Z\",\n                \"updatedAt\": \"2024-08-11T06:43:20.524743Z\"\n            }\n        ],\n        \"page\": 0,\n        \"pageSize\": 10,\n        \"total\": 2\n    }\n}"
+				},
+				{
+					"name": "Member Search Accounts",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/v1/accounts?page=0&pageSize=10",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"accounts"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=ISO-8859-1"
+						},
+						{
+							"key": "Content-Length",
+							"value": "36"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 11 Aug 2024 06:56:20 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": \"OVI1011\",\n    \"msg\": \"Forbidden\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Account",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIyMmVmMGQ0NS1kODYxLTQzNWMtOTYwNC0wZDY4ZTJiZTNmMjIiLCJzdWIiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDIiLCJlbWFpbCI6Im1lbWJlckBtZW1iZXIuY29tIiwicm9sIjoiTWVtYmVyIiwicHJpIjpbXSwiZXhwIjoxNzIzMzY2NTQ3fQ.y8Fun-2CwXmAzmgrONyoeVaer3AoEVoE6-m1UBHiW0lHNhnzH2UKqD54APL_-b35GlgpJM_E6EshAWkgeO0CMw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/v1/accounts/00000000-0000-0000-0000-000000000002",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"v1",
+						"accounts",
+						"00000000-0000-0000-0000-000000000002"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Admin Get Account Admin",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/v1/accounts/00000000-0000-0000-0000-000000000001",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"accounts",
+								"00000000-0000-0000-0000-000000000001"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 11 Aug 2024 06:52:20 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": \"OVI0000\",\n    \"msg\": \"OK\",\n    \"data\": {\n        \"id\": \"00000000-0000-0000-0000-000000000001\",\n        \"email\": \"admin@admin.com\",\n        \"status\": \"ACTIVE\",\n        \"roleName\": \"Admin\",\n        \"createdAt\": \"2024-08-11T06:43:20.524743Z\",\n        \"updatedAt\": \"2024-08-11T06:43:20.524743Z\"\n    }\n}"
+				},
+				{
+					"name": "Admin Get Account Member",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/v1/accounts/00000000-0000-0000-0000-000000000002",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"accounts",
+								"00000000-0000-0000-0000-000000000002"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 11 Aug 2024 06:53:19 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": \"OVI0000\",\n    \"msg\": \"OK\",\n    \"data\": {\n        \"id\": \"00000000-0000-0000-0000-000000000002\",\n        \"email\": \"member@member.com\",\n        \"status\": \"ACTIVE\",\n        \"roleName\": \"Member\",\n        \"createdAt\": \"2024-08-11T06:43:20.524743Z\",\n        \"updatedAt\": \"2024-08-11T06:43:20.524743Z\"\n    }\n}"
+				},
+				{
+					"name": "Member Get Account Admin",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/v1/accounts/00000000-0000-0000-0000-000000000001",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"accounts",
+								"00000000-0000-0000-0000-000000000001"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 11 Aug 2024 06:57:56 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": \"OVI1011\",\n    \"msg\": \"Forbidden\"\n}"
+				},
+				{
+					"name": "Member Get Account Member",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/v1/accounts/00000000-0000-0000-0000-000000000002",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"accounts",
+								"00000000-0000-0000-0000-000000000002"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 11 Aug 2024 06:58:56 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": \"OVI0000\",\n    \"msg\": \"OK\",\n    \"data\": {\n        \"id\": \"00000000-0000-0000-0000-000000000002\",\n        \"email\": \"member@member.com\",\n        \"status\": \"ACTIVE\",\n        \"roleName\": \"Member\",\n        \"createdAt\": \"2024-08-11T06:43:20.524743Z\",\n        \"updatedAt\": \"2024-08-11T06:43:20.524743Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Role",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI0NTA5MzVlNi0zOTY3LTRmNzQtOTUyNi1jYzAxZTYyODk3NDUiLCJzdWIiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDAiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInJvbCI6IkFkbWluIiwicHJpIjpbIldSSVRFX1JPTEUiLCJSRUFEX0FDQ09VTlQiXSwiZXhwIjoxNzIzMzY0OTY2fQ.11YfSAuyO4t3VcRd1EQ5g3JdoObyzZ4rs_yRyNG2HxS6G4TBHLQup9rRzMZvjXSYQlVsx5-X_kfuXqXTAeA6Yg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"privilegeNames\": [\"WRITE_ROLE\", \"READ_ACCOUNT\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/v1/roles/Member",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"v1",
+						"roles",
+						"Member"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Admin Remove READ_ACCOUNT role",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"privilegeNames\": [\"WRITE_ROLE\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/v1/roles/Admin",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"roles",
+								"Admin"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 11 Aug 2024 07:21:15 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": \"OVI0000\",\n    \"msg\": \"OK\"\n}"
+				},
+				{
+					"name": "Admin Add READ_ACCOUNT role for Member",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"privilegeNames\": [\"READ_ACCOUNT\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/v1/roles/Member",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"roles",
+								"Member"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 11 Aug 2024 07:25:08 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": \"OVI0000\",\n    \"msg\": \"OK\"\n}"
+				}
+			]
+		}
+	]
+}
